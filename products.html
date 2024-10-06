@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewreport" content="width=devicewidth, initial-scale=1.0">
+    <title>art auction website</title>
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .products .heading{
+            margin-top: 6.5rem;
+        }
+
+        .cart-button {
+            width: 180px;
+            height: 60px;
+            border-radius: 8px;
+            color: #fff;
+            overflow: hidden;
+            cursor: pointer;
+            transition: .3s ease;
+            
+            line-height: 1rem;
+            font-size: 1.6rem;
+            background: var(--brown);
+        }
+        .cart-button:hover{
+            background: #381d07;
+        }
+        .cart-button .add-to-cart{
+            font-size: 1rem;
+        }
+        .cart-button:active {
+            transform: scale(.9);
+        }
+
+        .cart-button .fa-shopping-cart {
+            position: absolute;
+            top: 50%;
+            left: -10%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            font-size: 2rem;
+        }
+
+        .cart-button .fa-box {
+            position: absolute;
+            top: -20%;
+            left: 52%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            font-size: 1.2rem;
+        }
+
+        .cart-button .add-to-cart,
+        .cart-button .added {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font: 700 18px 'Open Sans';
+        }
+        .cart-button .added {
+            opacity: 0;
+        }
+
+        .cart-button.clicked .fa-shopping-cart {
+            animation: cart 1.5s ease-in-out forwards;
+        }
+
+        .cart-button.clicked .fa-box {
+            animation: box 1.5s ease-in-out forwards;
+        }
+
+        .cart-button.clicked .add-to-cart {
+            animation: text1 1.5s ease-in-out forwards;
+        }
+
+        .cart-button.clicked .added {
+            animation: text2 1.5s ease-in-out forwards;
+        }
+        
+        @keyframes cart {
+            0% {
+                left: -10%;
+            }
+
+            40%, 60% {
+                left: 50%;
+            }
+
+            100% {
+                left: 110%;
+            }
+        }
+
+        @keyframes box {
+            0%, 40% {
+                top: -20%;
+            }
+
+            60% {
+                top: 40%;
+                left: 52%;
+            }
+
+            100% {
+                top: 40%;
+                left: 112%;
+            }
+        }
+
+        @keyframes text1 {
+            0% {
+                opacity: 1;
+            }
+
+            20%, 100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes text2 {
+            0%, 80% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .like-button .heart-icon {
+            height: 100px;
+            width: 100px;
+            background: url("css/images/heart.png");
+            background-position: left;
+            cursor: pointer;
+            position: absolute;
+            }
+
+            .like-button .heart-icon.liked {
+            animation: like-anim 0.7s steps(28) forwards;
+            }
+
+            @keyframes like-anim {
+            to {
+                background-position: right;
+            }
+            }
+
+            .like-button .heart-bg {
+                background: rgba(255, 192, 200, 0);
+                border-radius: 50%;
+                height: 45px;
+                width: 70px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 100ms ease;
+            }
+
+            .like-button {
+                display: flex;
+                align-items: center;
+            }
+    </style>
+</head>
+<body>
+
+<!-- header section starts -->
+<header>
+    <input type="checkbox" name="" id="toggler"> <!--caseta de validare comutator-->
+    <label for="toggler" class="fas fa-bars"></label> <!--comutator-->
+
+    <a href="#" class="logo">ART<span>-</span>ISAN<span></a> <!--creare logo-->
+        <!--creare bara de navigare-->
+        <nav class="navbar">
+        <a href="index.html">Home</a> 
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="review.html">Community</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!--crearea unei clase de pictograme-->
+    <div class="icons">
+        <a href="favorites.html" class="fas fa-heart"></a>
+        <a href="cart.html" class="fas fa-shopping-cart"></a>
+        <a href="#" class="fas fa-user"></a>
+    </div>
+</header>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewreport" content="width=devicewidth, initial-scale=1.0">
+    <title>art auction website</title>
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+
+<!-- header section starts -->
+<header>
+    <input type="checkbox" name="" id="toggler"> <!--caseta de validare comutator-->
+    <label for="toggler" class="fas fa-bars"></label> <!--comutator-->
+
+    <a href="#" class="logo">ART<span>-</span>ISAN<span></a> <!--creare logo-->
+        <!--creare bara de navigare-->
+        <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="review.html">Community</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!--crearea unei clase de pictograme-->
+    <div class="icons">
+        <a href="favorites.html" class="fas fa-heart"></a>
+        <a href="cart.html" class="fas fa-shopping-cart"></a>
+        <a href="register&login.html" class="fas fa-user"></a>
+    </div>
+</header>
+<!-- header section ends -->
+<!-- products section starts -->
+<section class="products" id="products">
+    <h1 class="heading"> Our <span>products</span></h1>
+
+    <div class="small-container">
+        <div class="row">
+            <h2>All products</h2>
+            <select>
+                <option>Short by price</option>
+                <option>Short by popularity</option>
+                <option>Short by sale</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="box-container">
+        <div class="box">
+            <span class="discount">-10%</span>
+            <div class="image">
+                <img src="css/images/colivie/colivie.jpg" alt="">
+                <div class="icons">
+                    <a>
+                        <div class="like-button">
+                            <div class="heart-bg">
+                              <div class="heart-icon"></div>
+                            </div>
+                        </div>
+                    </a>
+                    <a>
+                        <button class="cart-button">
+                            <span class="add-to-cart">
+                                add to cart
+                            </span>
+                            <span class="added">
+                                added
+                            </span>
+                            <i class="fas fa-shopping-cart"></i>
+                            <i class="fas fa-box"></i>
+                        </button>
+                    </a>
+                    <a href="colivie.html" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Caged Serenity </h3><span> by Liam Hawthorne</span>
+                <div class="price"> 31.50$ <span>34.99$</span> </div>
+            </div>
+        </div>
+
+
+        <div class="box">
+            <span class="discount">-15%</span>
+            <div class="image">
+                <img src="css/images/Charleston/Charleston.jpg" alt="">
+                <div class="icons">
+                    <a>
+                        <div class="like-button">
+                            <div class="heart-bg">
+                              <div class="heart-icon"></div>
+                            </div>
+                        </div>
+                    </a>
+                    <a>
+                        <button class="cart-button">
+                            <span class="add-to-cart">
+                                add to cart
+                            </span>
+                            <span class="added">
+                                added
+                            </span>
+                            <i class="fas fa-shopping-cart"></i>
+                            <i class="fas fa-box"></i>
+                        </button>
+                    </a>
+                    <a href="charleston.html" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Charleston </h3><span> by Christine Lashley</span>
+                <div class="price"> 38.25$ <span>44.99$</span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-10%</span>
+            <div class="image">
+                <img src="css/images/TheCardPlayers/TheCardPlayers.jpg" alt="">
+                <div class="icons">
+                    <a>
+                        <div class="like-button">
+                            <div class="heart-bg">
+                              <div class="heart-icon"></div>
+                            </div>
+                        </div>
+                    </a>
+                    <a>
+                        <button class="cart-button">
+                            <span class="add-to-cart">
+                                add to cart
+                            </span>
+                            <span class="added">
+                                added
+                            </span>
+                            <i class="fas fa-shopping-cart"></i>
+                            <i class="fas fa-box"></i>
+                        </button>
+                    </a>
+                    <a href="TheCardPlayers.html" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>The Card Players</h3><span>by Edward Portielje</span>
+                <div class="price"> 54.00$ <span>59.99$</span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-20%</span>
+            <div class="image">
+                <img src="css/images/Loved and Lost/Loved and Lost.jpg" alt="">
+                <div class="icons">
+                    <a>
+                        <div class="like-button">
+                            <div class="heart-bg">
+                              <div class="heart-icon"></div>
+                            </div>
+                        </div>
+                    </a>
+                    <a>
+                        <button class="cart-button">
+                            <span class="add-to-cart">
+                                add to cart
+                            </span>
+                            <span class="added">
+                                added
+                            </span>
+                            <i class="fas fa-shopping-cart"></i>
+                            <i class="fas fa-box"></i>
+                        </button>
+                    </a>
+                    <a href="LovedandLost.html" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Loved and Lost</h3><span> by Haynes King</span>
+                <div class="price"> 63.99$ <span>79.99$</span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-15%</span>
+            <div class="image">
+                <img src="css/images/Campagne/campagne.jpg" alt="">
+                <div class="icons">
+                    <a>
+                        <div class="like-button">
+                            <div class="heart-bg">
+                              <div class="heart-icon"></div>
+                            </div>
+                        </div>
+                    </a>
+                    <a>
+                        <button class="cart-button">
+                            <span class="add-to-cart">
+                                add to cart
+                            </span>
+                            <span class="added">
+                                added
+                            </span>
+                            <i class="fas fa-shopping-cart"></i>
+                            <i class="fas fa-box"></i>
+                        </button>
+                    </a>
+                    <a href="campagne.html" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Campagne</h3><span> by Julia Aspin</span>
+                <div class="price"> 72.25$ <span>84.99$</span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-10%</span>
+            <div class="image">
+                <img src="css/images/Here Still/Here Still.jpg" alt="">
+                <div class="icons">
+                    <a>
+                        <div class="like-button">
+                            <div class="heart-bg">
+                              <div class="heart-icon"></div>
+                            </div>
+                        </div>
+                    </a>
+                    <a>
+                        <button class="cart-button">
+                            <span class="add-to-cart">
+                                add to cart
+                            </span>
+                            <span class="added">
+                                added
+                            </span>
+                            <i class="fas fa-shopping-cart"></i>
+                            <i class="fas fa-box"></i>
+                        </button>
+                    </a>
+                    <a href="hereStill.html" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Here Still</h3><span>by Arna Nurgazieva</span>
+                <div class="price"> 76.50$ <span>84.99$</span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-5%</span>
+        <div class="image">
+                <img src="css/images/Worth fighting for/Worth fighting for.jpg" alt="">
+                <div class="icons">
+                    <a>
+                        <div class="like-button">
+                            <div class="heart-bg">
+                              <div class="heart-icon"></div>
+                            </div>
+                        </div>
+                    </a>
+                    <a>
+                        <button class="cart-button">
+                            <span class="add-to-cart">
+                                add to cart
+                            </span>
+                            <span class="added">
+                                added
+                            </span>
+                            <i class="fas fa-shopping-cart"></i>
+                            <i class="fas fa-box"></i>
+                        </button>
+                    </a>
+                    <a href="WorthFightingFor.html" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Worth fighting for</h3><span>by Adam Garcias</span>
+                <div class="price"> 80.75$ <span>84.99$</span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="css/images/The Loneliest/The Loneliest.jpg" alt="">
+                <div class="icons">
+                    <a>
+                        <div class="like-button">
+                            <div class="heart-bg">
+                              <div class="heart-icon"></div>
+                            </div>
+                        </div>
+                    </a>
+                    <a>
+                        <button class="cart-button">
+                            <span class="add-to-cart">
+                                add to cart
+                            </span>
+                            <span class="added">
+                                added
+                            </span>
+                            <i class="fas fa-shopping-cart"></i>
+                            <i class="fas fa-box"></i>
+                        </button>
+                    </a>
+                    <a href="theLoneliest.html" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>The Loneliest</h3><span>by Martha Stravinski</span>
+                <div class="price"> 84.99$ </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-btn">
+        <a href="products.html" class="page-1"><span>1</span></a>
+        <a href="products-2.html" class="page-1"><span>2</span></a>
+        <a href="products-3.html" class="page-1"><span>3</span></a>
+        <a href="products-4.html" class="page-1"><span>4</span></a>
+        <a href="products-2.html" class="page-1"><span>&#8594;</span></a>
+    </div>
+</section>
+
+
+<!-- products section ends -->
+
+
+<!-- footer section starts -->
+
+<section class="footer">
+    
+    <div class="credit"> created by <span> Drăghici Daria-Ioana</span> all rights reserved</div>
+
+</section>
+<script>
+    const cartBtn = document.querySelector('.cart-button');
+
+cartBtn.addEventListener('click', () => {
+
+cartBtn.classList.add('clicked');
+
+
+// setTimeout(() => {
+//     cartBtn.classList.remove('clicked');
+// }, 3000);
+
+});
+document.querySelectorAll('.cart-button').forEach(button => {
+    button.addEventListener('click', function() {
+        this.classList.add('clicked');
+    });
+});
+</script>
+<!-- footer section ends -->
+<script>
+    document.querySelectorAll('.heart-icon').forEach(icon => {
+    icon.addEventListener('click', function() {
+        this.classList.toggle('liked');
+    });
+});
+</script>
+</body>
+</html>

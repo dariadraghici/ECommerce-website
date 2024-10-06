@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ART-ISAN</title>
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding:25px;
+            min-height: 100vh;
+            background: linear-gradient(90deg, rgb(240, 204, 157) 60%, rgb(235, 205, 165) 40.1%);
+        }
+
+        .container form{
+            padding:20px;
+            width:700px;
+            background: #fff;
+            box-shadow: 0 5px 10px rgba(0,0,0,.1);
+        }
+
+        .container form .row{
+            display: flex;
+            flex-wrap: wrap;
+            gap:15px;
+        }
+
+        .container form .row .col{
+            flex:1 1 250px;
+        }
+
+        .container form .row .col .title{
+            font-size: 20px;
+            color:#333;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .container form .row .col .inputBox{
+            margin:15px 0;
+        }
+
+            .container form .row .col .inputBox span{
+            margin-bottom: 10px;
+            display: block;
+            font-size: 1.5rem;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+
+        .container form .row .col .inputBox input{
+            width: 100%;
+            border:1px solid #ccc;
+            padding:10px 15px;
+            font-size: 15px;
+            text-transform: none;
+        }
+
+        .container form .row .col .inputBox input:focus{
+            border:1px solid #000;
+        }
+
+        .container form .row .col .flex{
+            display: flex;
+            gap:15px;
+        }
+
+        .container form .row .col .flex .inputBox{
+            margin-top: 5px;
+        }
+
+        .container form .row .col .inputBox img{
+            height: 34px;
+            margin-top: 5px;
+            filter: drop-shadow(0 0 1px #000);
+        }
+
+        .container form .submit{
+            padding:10px;
+            font-size: 17px;
+            background: #27ae60;
+            color:#fff;
+            margin-top: 5px;
+            cursor: pointer;
+            position: absolute;
+            
+        }
+
+        .container form .submit:hover{
+            background: #0b5027;
+            }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <form action="">
+
+        <div class="row">
+
+            <div class="col">
+
+                <h3 class="title">billing address</h3>
+
+                <div class="inputBox">
+                    <span>Full name:</span>
+                    <input type="text" placeholder="Ion Popescu">
+                </div>
+                <div class="inputBox">
+                    <span>Email:</span>
+                    <input type="email" placeholder="example@example.com">
+                </div>
+                <div class="inputBox">
+                    <span>Address:</span>
+                    <input type="text" placeholder="room - street - locality">
+                </div>
+                <div class="inputBox">
+                    <span>city:</span>
+                    <input type="text" placeholder="Buzău">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>County:</span>
+                        <input type="text" placeholder="Buzău">
+                    </div>
+                    <div class="inputBox">
+                        <span>Zip code:</span>
+                        <input type="text" placeholder="123 456">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col">
+
+                <h3 class="title">payment</h3>
+
+                <div class="inputBox">
+                    <span>Cards accepted :</span>
+                    <img src="css/images/cards.jpg" alt="">
+                </div>
+                <div class="inputBox">
+                    <span>Name on card :</span>
+                    <input type="text" placeholder="ION POPESCU">
+                </div>
+                <div class="inputBox">
+                    <span>Credit card number :</span>
+                    <input type="number" placeholder="1111-2222-3333-4444">
+                </div>
+                <div class="inputBox">
+                    <span>Exp month :</span>
+                    <input type="text" placeholder="January">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>Exp year :</span>
+                        <input type="number" placeholder="2024">
+                    </div>
+                    <div class="inputBox">
+                        <span>CVV :</span>
+                        <input type="text" placeholder="123">
+                    </div>
+                </div>
+
+            </div>
+    
+        </div>
+
+        <a button href="orderplaced.html" class="submit">Proceed to checkout</a>
+
+    </form>
+
+</div>    
+    
+</body>
+</html>

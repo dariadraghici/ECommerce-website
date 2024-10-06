@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewreport" content="width=devicewidth, initial-scale=1.0">
+    <title>art auction website</title>
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .container{
+            margin: 50px 20px;
+            display: flex;
+            margin-top: 14.5rem;
+            gap: 10rem;
+            margin-left: 3rem;
+        }
+        @media (max-width:991px){
+            .container{
+                margin: 50px 20px;
+                display: flex;
+                margin-top: 14.5rem;
+                flex-wrap:wrap;
+                gap: 10rem;
+                margin-left: 3rem;
+            }
+        }
+
+        .right-box{
+            flex:1 1 30rem;
+            box-shadow: 0 .5rem 1.5rem #000000;
+            border-radius: .5rem;
+            padding: 3rem 2rem;
+            position: relative;
+            width: 50%;
+            background-color: #caa287;
+        }
+
+        .main-image-box{
+            padding: 30px 0px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        .main-image{
+            height: 390px;
+            width: fit-content;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+            padding-top: 2rem;
+            overflow: hidden;
+            
+        }
+        .small-images{
+            display: flex;
+            justify-content: space-between;
+            padding:8px;
+            align-items: center;
+            position: relative;
+            text-align: center;
+            padding-top: .5rem;
+            overflow: hidden;
+        }
+        .image-box{
+            margin: 0px 8px 8px 0px;
+            height: 100px;
+            width: 100px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            box-shadow: 0 .5rem 1rem #000000;
+            
+        }
+        .image{
+            height: 90%;
+            width: auto;
+        }
+        .details-box{
+            margin-top: 4rem;
+            width: 50%;
+            padding-left: 50px;
+            padding-right: 10px;       
+        }
+        @media (max-width:991px){
+            .details-box{
+            margin-top: 4rem;
+            width: 50%;
+            padding-left: 50px;  
+            width: auto; 
+        }
+        }
+        .details-box h1{
+            font-weight: 600;
+            color: #473729;
+            font-size: 3rem;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .details-box h4{
+            font-weight: 600;
+            color: #1a110a;
+            font-size: 3rem;
+            margin-top: 2rem;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-bottom: 1rem;
+        }
+        .details-box p{
+            font-weight: 600;
+            color: #000000;
+            font-size: 1.3rem;
+            font-style: italic;
+            margin-right: 6rem;
+            text-align: justify;
+        }
+        .details-box h2{
+            font-size: 2rem;
+            color: #167ddf;
+            border: #1900ff .3rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+        .fa{
+            color: #6aaae6;
+            margin-left: 10px;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!-- header section starts -->
+<header>
+    <input type="checkbox" name="" id="toggler"> <!--caseta de validare comutator-->
+    <label for="toggler" class="fas fa-bars"></label> <!--comutator-->
+
+    <a href="#" class="logo">ART<span>-</span>ISAN<span></a> <!--creare logo-->
+        <!--creare bara de navigare-->
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html">Products</a>
+            <a href="review.html">Community</a>
+            <a href="contact.html">Contact</a>
+    </nav>
+
+    <!--crearea unei clase de pictograme-->
+    <div class="icons">
+        <a href="favorites.html" class="fas fa-heart"></a>
+        <a href="cart.html" class="fas fa-shopping-cart"></a>
+        <a href="register&login.html" class="fas fa-user"></a>
+    </div>
+</header>
+
+<div class="container">
+    <div class="right-box">
+        <div class="main-image-box">
+            <img src="css/images/TheCardPlayers/TheCardPlayers.jpg" id="mainImage" class="main-image">
+        </div>
+        <div class="small-images">
+            <div class="image-box"><img src="css/images/TheCardPlayers/The Card Players 1.jpg" class="image"></div>
+            <div class="image-box"><img src="css/images/TheCardPlayers/The Card Players 2.jpg" class="image"></div>
+            <div class="image-box"><img src="css/images/TheCardPlayers/TheCardPlayers.jpg" class="image"></div>
+            <div class="image-box"><img src="css/images/TheCardPlayers/The Card Players 3.jpg" class="image"></div>
+        </div>
+    </div>
+    <div class="details-box">
+        <h1>The Card Players by Edward Portielje</h1>
+        <p> Availability (In stock)</p>
+        <h2>59.99$</h2>
+        <table cellspacing="4" class="inputs">
+            <tr>
+                <td>Quantity</td>
+                <td align="right"><input type="number" id="first"></td>
+            </tr>
+            <tr>
+                <td> Sub Total</td>
+                <td align="right"><input type="number" id="second"></td>
+            </tr>
+            <tr>
+                <td>Discount 10%</td>
+                <td align="right"><input type="number" id="third"></td>
+            </tr>
+            <tr>
+                <td> Total</td>
+                <td align="right"><input type="number" id="fourth"></td>
+            </tr>
+        </table>
+        <h4>Description <i class="fa fa-indent"></i></h4>
+        <p>
+            In the realm of the imagined, there exists a captivating painting titled "The Card Players" by the visionary artist Edward Portielje. Within this ethereal masterpiece, three enigmatic women, each ensconced in the prime of their lives, converge in a harmonious tableau amidst the bucolic serenity of the countryside. Bathed in the resplendent hues of a sun-kissed palette, the canvas pulsates with an ineffable warmth, drawing the beholder into a realm where time stands still.
+
+            As if woven from the fabric of dreams, the figures of the women exude an aura of timeless grace, their countenances suffused with a quiet intensity that belies the simplicity of their surroundings. Their garments, woven from the threads of rustic elegance, whisper of bygone eras and untold stories, evoking a sense of nostalgia and wonder. With delicate fingers, they manipulate the cards before them, their movements imbued with a fluidity that mirrors the ebb and flow of life itself.
+
+            Through the alchemy of light and shadow, Portielje conjures a tapestry of contrasts, weaving a symphony of textures that dance across the canvas with a mesmerizing cadence. Each brushstroke serves as a portal to another dimension, inviting the viewer to lose themselves in the labyrinthine depths of the artist's imagination.
+
+            In this surreal realm, time is but a fleeting illusion, and the boundaries between reality and fantasy blur into obscurity. As the women lean in over the table, their gazes locked in silent communion, a palpable sense of camaraderie and kinship permeates the air, transcending the constraints of language and culture
+        </p>
+        <a href="cart.html" class="btn">Add to cart</a>
+    </div>
+</div>
+<script>
+let mainImage =  document.getElementById("mainImage");
+    let smallImage = document.getElementsByClassName("image");
+    smallImage[0].onclick = ()=>{
+        mainImage.src =  smallImage[0].src;
+    }
+    smallImage[1].onclick = ()=>{
+        mainImage.src =  smallImage[1].src;
+    }
+    smallImage[2].onclick = ()=>{
+        mainImage.src =  smallImage[2].src;
+    }
+    smallImage[3].onclick = ()=>{
+        mainImage.src =  smallImage[3].src;
+    }
+    function cart(){
+        var a,b,c,d;
+        a=document.getElementById("first").value;
+        b=a*59.99;
+        document.getElementById("second").value=b;
+        c=(b*10)/100;
+        document.getElementById("third").value=c;
+        d=b-c;
+        document.getElementById("fourth").value=d;
+    }
+    let ans=document.getElementById("first");
+    ans.addEventListener('keyup',cart);
+</script>
+
+<section class="footer">
+    
+    <div class="credit"> created by <span> Drăghici Daria-Ioana</span> all rights reserved</div>
+
+</section>
+
+    </body>
+</html>

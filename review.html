@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewreport" content="width=devicewidth, initial-scale=1.0">
+    <title>art auction website</title>
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .review .heading{
+            margin-top: 6.5rem;
+        }
+        @media (max-width:991px){
+            .container{
+                margin: 50px 20px;
+                display: flex;
+                margin-top: 14.5rem;
+                flex-wrap:wrap;
+                gap: 10rem;
+                margin-left: 3rem;
+            }
+        }
+
+        .right-box{
+            flex:1 1 30rem;
+            box-shadow: 0 .5rem 1.5rem #000000;
+            border-radius: .5rem;
+            padding: 3rem 2rem;
+            position: relative;
+            width: 50%;
+            background-color: #caa287;
+        }
+
+        .main-image-box{
+            padding: 30px 0px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        .main-image{
+            height: 390px;
+            width: fit-content;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+            padding-top: 2rem;
+            overflow: hidden;
+            
+        }
+        .small-images{
+            display: flex;
+            justify-content: space-between;
+            padding:8px;
+            align-items: center;
+            position: relative;
+            text-align: center;
+            padding-top: .5rem;
+            overflow: hidden;
+        }
+        .image-box{
+            margin: 0px 8px 8px 0px;
+            height: 100px;
+            width: 100px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            box-shadow: 0 .5rem 1rem #000000;
+            
+        }
+        .image{
+            height: 90%;
+            width: auto;
+        }
+        .details-box{
+            margin-top: 4rem;
+            width: 50%;
+            padding-left: 50px;
+            padding-right: 10px;       
+        }
+        @media (max-width:991px){
+            .details-box{
+            margin-top: 4rem;
+            width: 50%;
+            padding-left: 50px;  
+            width: auto; 
+        }
+        }
+        .details-box h1{
+            font-weight: 600;
+            color: #473729;
+            font-size: 3rem;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .details-box h4{
+            font-weight: 600;
+            color: #1a110a;
+            font-size: 3rem;
+            margin-top: 2rem;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-bottom: 1rem;
+        }
+        .details-box p{
+            font-weight: 600;
+            color: #000000;
+            font-size: 1.3rem;
+            font-style: italic;
+            margin-right: 6rem;
+            text-align: justify;
+        }
+        .details-box h2{
+            font-size: 2rem;
+            color: #167ddf;
+            border: #1900ff .3rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+        .fa{
+            color: #6aaae6;
+            margin-left: 10px;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!-- header section starts -->
+<header>
+    <input type="checkbox" name="" id="toggler"> <!--caseta de validare comutator-->
+    <label for="toggler" class="fas fa-bars"></label> <!--comutator-->
+
+    <a href="#" class="logo">ART<span>-</span>ISAN<span></a> <!--creare logo-->
+        <!--creare bara de navigare-->
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html">Products</a>
+            <a href="review.html">Community</a>
+            <a href="contact.html">Contact</a>
+    </nav>
+
+    <!--crearea unei clase de pictograme-->
+    <div class="icons">
+        <a href="favorites.html" class="fas fa-heart"></a>
+        <a href="cart.html" class="fas fa-shopping-cart"></a>
+        <a href="register&login.html" class="fas fa-user"></a>
+    </div>
+</header>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewreport" content="width=devicewidth, initial-scale=1.0">
+    <title>art auction website</title>
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+
+<!-- header section starts -->
+<header>
+    <input type="checkbox" name="" id="toggler"> <!--caseta de validare comutator-->
+    <label for="toggler" class="fas fa-bars"></label> <!--comutator-->
+
+    <a href="#" class="logo">ART<span>-</span>ISAN<span></a> <!--creare logo-->
+        <!--creare bara de navigare-->
+        <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="review.html">Community</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!--crearea unei clase de pictograme-->
+    <div class="icons">
+        <a href="favorites.html" class="fas fa-heart"></a>
+        <a href="cart.html" class="fas fa-shopping-cart"></a>
+        <a href="register&login.html" class="fas fa-user"></a>
+    </div>
+</header>
+<!-- header section ends -->
+
+
+<!-- review section starts-->
+<section class="review" id="review">
+    <h1 class="heading"> Customers'<span>reviews</span></h1>
+    <div class="box-container">
+        <div class="box">
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>I just bought an amazing oil painting from ART-ISAN. Everything went smoothly and effectively throughout. The artwork was even more stunning in person when it arrived, and it arrived fast. I'm really happy with my purchase and would strongly advise anyone who enjoys art to visit this website."</p>
+            <div class="user">
+                <img src="css/images/Liam Thornton.jpg" alt="">
+                <div class="user-info">
+                    <h3>Liam Thornton</h3>
+                    <span> happy customer</span>
+                </div>
+            </div>
+            <span class="fas fa-quote-right"></span>
+        </div>
+
+        <div class="box">
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>I've used a lot of auction websites because I'm an enthusiastic art collector, but none have pleased me as much as this one. The variety and excellent quality of the artwork selection are noteworthy. This is where I've purchased multiple pieces for my collection, and every transaction has gone well. All in all, an excellent experience!</p>
+            <div class="user">
+                <img src="css/images/Amelia Hayes.jpg" alt="">
+                <div class="user-info">
+                    <h3>Amelia Hayes</h3>
+                    <span> happy customer</span>
+                </div>
+            </div>
+            <span class="fas fa-quote-right"></span>
+        </div>
+        
+        <div class="box">
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>I'm a first-time buyer on ART-ISAN and I couldn't be happier with my experience. The customer service team was incredibly helpful, guiding me through the bidding process and answering all my questions promptly. I got a beautiful sculpture at a reasonable price, and it arrived securely packaged and in perfect condition. I'll definitely be back for more!</p>
+            <div class="user">
+                <img src="css/images/Ethan Ramsey.jpg" alt="">
+                <div class="user-info">
+                    <h3>Ethan Ramsey</h3>
+                    <span> happy customer</span>
+                </div>
+            </div>
+            <span class="fas fa-quote-right"></span>
+        </div>
+        
+        <div class="box">
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>I can't even remember how many times I've purchased artwork from ART-ISAN, but I can assure you that it never lets me down. There is an amazing range of artworks to suit every taste and budget. This site offers something for everyone, regardless of experience level or point in time spent collecting art!</p>
+            <div class="user">
+                <img src="css/images/Sebastian Mercer.jpg" alt="">
+                <div class="user-info">
+                    <h3>Sebastian Mercer</h3>
+                    <span> happy customer</span>
+                </div>
+            </div>
+            <span class="fas fa-quote-right"></span>
+        </div>
+
+        <div class="box">
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>While looking for unusual items to decorate my house, I came upon ART-ISAN, and I'm very happy I did. The artwork is expertly chosen and includes works by both well-known and up-and-coming artists. I discovered a gorgeous piece of mixed-media art that goes well with my room. The artwork came neatly packed, and the transaction went smoothly. I'm really happy with what I bought!</p>
+            <div class="user">
+                <img src="css/images/Ava Sinclair.jpg" alt="">
+                <div class="user-info">
+                    <h3>Ava Sinclair</h3>
+                    <span> happy customer</span>
+                </div>
+            </div>
+            <span class="fas fa-quote-right"></span>
+        </div>
+        
+        <div class="box">
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>ART-ISAN exceeded my expectations in every way. Not only did I find a rare vintage print that I've been searching for, but the entire process from bidding to delivery was flawless. The website's layout is intuitive, making it easy to navigate and discover new treasures. I'll definitely be returning to explore more of their offerings</p>
+            <div class="user">
+                <img src="css/images/Sophia Morgan.jpg" alt="">
+                <div class="user-info">
+                    <h3>Sophia Morgan</h3>
+                    <span> happy customer</span>
+                </div>
+            </div>
+            <span class="fas fa-quote-right"></span>
+        </div>
+        
+        <div class="box">
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>I am totally obsessed with this website! I've always been into art, but finding cool pieces that fit my vibe can be a struggle. ART-ISAN has seriously got it all - from funky street art to dreamy abstracts. I recently snagged this rad graffiti-inspired canvas for my room, and let me tell you, it's like Instagram-worthy! Plus, the whole bidding process was super easy, even for a newbie like me. Can't wait to add more art to my collection - thanks, guys!</p>
+            <div class="user">
+                <img src="css/images/Isabella Harper.jpg" alt="">
+                <div class="user-info">
+                    <h3>Isabella Harper</h3>
+                    <span> happy customer</span>
+                </div>
+            </div>
+            <span class="fas fa-quote-right"></span>
+        </div>
+        <div class="box">
+            <div class="wrapper">
+                <h3>Write your own review! :) </h3>
+                <form action="">
+                    <div class="rating">
+                        <input type="number" name="rating" hidden>
+                        <i class='bx bx-star star'></i>
+                        <i class='bx bx-star star'></i>
+                        <i class='bx bx-star star'></i>
+                        <i class='bx bx-star star'></i>
+                        <i class='bx bx-star star'></i>
+                    </div>
+                    <textarea name="opinion" cols="30" rows="5" placeholder="Your opinion..."></textarea>
+                    <div class="btn-group">
+                        <button type="submit" class="btn submit">Send message</button>
+                        <button class="btn cancel">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</section>
+
+<section class="footer">
+    
+    <div class="credit"> created by <span> Drăghici Daria-Ioana</span> all rights reserved</div>
+
+</section>
+
+    </body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewreport" content="width=devicewidth, initial-scale=1.0">
+    <title>ART-ISAN</title>
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+       @media (max-width:991px){
+           .details-box{
+           margin-top: 4rem;
+           width: 50%;
+           padding-left: 50px;  
+           width: auto; 
+           }
+           .cart{
+               margin: 80px auto;
+           }   
+       }
+       .heading{
+        margin-top: 8rem;
+        margin-left: 10rem;
+        margin-right: 10rem;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+       }
+       .container{
+        display: flex;
+        margin: 3rem 150px;
+       }
+       .cart{
+        width: 100%;
+        background-color: rgb(240, 204, 157);
+       }
+       .top{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        margin: 15px 0;
+       }
+       .top h2{
+        font-size: 2.5rem;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: rgb(92, 66, 47);
+    }
+       table{
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+       }
+       .table-head{
+        color: rgb(241, 227, 227);
+        background-color: rgb(158, 131, 95);
+       }
+       .table-head tr th{
+        font-size: 1.8rem;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+       }
+       .head-img{
+        text-align: left;
+        padding-left: 7px;
+       }
+       .summary{
+        background-color: rgb(218, 186, 144);
+        width: 35%;
+        margin-left: 20px;
+       }
+       .detail{
+        margin: 10px 0;
+        padding: 0 10px;
+        align-items: center;
+        background-color: rgb(146, 122, 91);
+        color: rgb(231, 203, 203);
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+       }
+       input{
+        border: none;
+        outline: none;
+        width: 100%;
+        height: 40px;
+        margin: 15px 0;
+        padding: 7px;
+        background-color: rgb(255, 241, 220);
+       }
+       .first-btn{
+        border: none;
+        background-color: rgb(129, 83, 53);
+        padding: 8px 30px;
+        color: rgb(255, 212, 187);
+        border-radius: 3px;
+        cursor:pointer;
+        margin-bottom: 15px;
+       }
+       .checkout{
+        width: 100%;
+        background-color: rgb(128, 63, 20);
+        cursor: pointer;
+        padding: 7px;
+        color: rgb(230, 204, 192);
+       }
+       button:hover,.checkout:hover{
+        background-color: rgb(78, 45, 21);
+       }
+       .img-box{
+        margin: 5px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        border: 1px solid rgb(78, 45, 21);
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       }
+       .img{
+        max-width: 50px;
+        max-height: 43px;
+        border-radius: 50%;
+       }
+       .fa-trash{
+        color:crimson;
+        cursor: pointer;
+       }
+       .fa-trash:hover{
+        color: brown;
+       }
+   </style>
+</head>
+<body>
+
+<!-- header section starts -->
+<header>
+    <input type="checkbox" name="" id="toggler"> <!--caseta de validare comutator-->
+    <label for="toggler" class="fas fa-bars"></label> <!--comutator-->
+
+    <a href="#" class="logo">ART<span>-</span>ISAN<span></a> <!--creare logo-->
+        <!--creare bara de navigare-->
+        <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="products.html">Products</a>
+                <a href="review.html">Community</a>
+                <a href="contact.html">Contact</a>
+    </nav>
+
+    <!--crearea unei clase de pictograme-->
+    <div class="icons">
+        <a href="favorites.html" class="fas fa-heart"></a>
+        <a href="register&login.html" class="fas fa-user"></a>
+    </div>
+</header>
+
+<h1 class="heading"> <span>Your </span>CART <span>to a </span>LIFE <span>more embellished</span></h1>
+<div class="container">
+    <div class="cart">
+        <div class="top">
+            <h2>Shopping cart</h2>
+            <h2 id="itemA">32 Pieces of ART</h2>
+        </div>
+        <table cellspacing="0" class="table-head">
+            <tr>
+                <th width="140" class="head-img">Image</th>
+                <th width="360" >Name</th>
+                <th width="150" >Price</th>
+                <th width="70" >Delete</th>
+            </tr>
+        </table>
+        <table id="root" cellspacing="0"></table>
+        <hr>
+    </div>
+    <div class="summary">
+        <div class="top">
+            <h2>Order Summary</h2>
+        </div>
+        <div class="detail">
+            <h2 id="itemB">32 Items</h2>
+            <h2 id="totalA">$123.75</h2>
+        </div>
+        <div style="margin-top: 30px;padding: 0 30px;">
+            <h2>Shipping</h2>
+            <input type="text" placeholder="Standard delivery">
+            <h2>Promo code</h2>
+            <input type="text" placeholder="Enter your code" id="promocode">
+            <button class="first-btn" id="promo" onclick="promo()">Apply</button>
+        </div> 
+        <hr>   
+        <div class="top">
+            <h2>Total</h2>
+            <h2 id="totalB">$123.75</h2>
+        </div>
+        <div style="padding: 0 10px; margin-bottom: 20px;">
+            <a button href="orderdetails.html" class="checkout">Check out</button></a>
+        </div>
+    </div>
+</div>
+
+<script>
+   const product=[
+    {
+        image:'css/images/colivie.jpg',
+        title:'Caged Serenity',
+        price: 31.50
+    },
+    {
+        image:'css/images/Charleston.jpg',
+        title:'Charleston',
+        price: 38.25
+    },
+    {
+        image:'css/images/TheCardPlayers/TheCardPlayers.jpg',
+        title:'The Card Players',
+        price: 54.00
+    }
+    ]
+    const categories=[...new Set(product.map((item)=>
+        {return item}))];
+
+        function delElement(a){
+            categories.splice(a,1);
+            displaycart();
+        }
+
+        function promo(){
+            let promocode=document.getElementById('promocode').value;
+            if(promocode=='atestat'){
+                displaycart(50);
+            }
+            else(
+                prompt("Please enter a correct promo code")
+            )
+        }
+
+    function displaycart(c){
+        let total=0;
+        let j=0;
+        document.getElementById("itemA").innerHTML = categories.length + " Items";
+        document.getElementById("itemB").innerHTML = categories.length + " Items";
+        if(categories.length==0){
+            document.getElementById("root").innerHTML="Your cart is empty";
+
+            document.getElementById("totalA").innerHTML = "$ 00.00";
+            document.getElementById("totalB").innerHTML = "$ 00.00";
+        }
+        else{
+            document.getElementById("root").innerHTML = categories.map((items)=>{
+                let{image, title, price} = items;
+                total= total+price;
+                document.getElementById("totalA").innerHTML = "$ "+ total;
+                
+                if(c==50){
+                    document.getElementById("totalB").innerHTML="$ "+(total-c);
+                }else{
+                    document.getElementById("totalB").innerHTML="$ "+total;
+                }
+                return(
+                    `<tr>
+                        <td width="150"><div class="img-box"><img class="img" src=${image}></div></td>
+                        <td width="360"><p style='font-size:15px;'>${title}</p></td>
+                        <td width="150"><h2 style='font-size:15px;color:black;'>${price}</h2></td>
+                        <td width="70">`+"<i class='fa-solid fa-trash' onclick='delElement("+ (j++) +")'></i></td>"+
+                    `</tr>`
+                );
+            }).join('');
+        }
+    }
+    displaycart();
+
+</script>
+
+
+<section class="footer">
+    
+    <div class="credit"> created by <span> Drăghici Daria-Ioana</span> all rights reserved</div>
+
+</section>
+
+    </body>
+</html>

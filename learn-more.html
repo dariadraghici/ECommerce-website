@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewreport" content="width=devicewidth, initial-scale=1.0">
+    <title>art auction website</title>
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .about .heading{
+            margin-top: 6.5rem;
+        }
+        @media (max-width:991px){
+            .container{
+                margin: 50px 20px;
+                display: flex;
+                margin-top: 14.5rem;
+                flex-wrap:wrap;
+                gap: 10rem;
+                margin-left: 3rem;
+            }
+        }
+
+        .right-box{
+            flex:1 1 30rem;
+            box-shadow: 0 .5rem 1.5rem #000000;
+            border-radius: .5rem;
+            padding: 3rem 2rem;
+            position: relative;
+            width: 50%;
+            background-color: #caa287;
+        }
+
+        .main-image-box{
+            padding: 30px 0px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        .main-image{
+            height: 390px;
+            width: fit-content;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+            padding-top: 2rem;
+            overflow: hidden;
+            
+        }
+        .small-images{
+            display: flex;
+            justify-content: space-between;
+            padding:8px;
+            align-items: center;
+            position: relative;
+            text-align: center;
+            padding-top: .5rem;
+            overflow: hidden;
+        }
+        .image-box{
+            margin: 0px 8px 8px 0px;
+            height: 100px;
+            width: 100px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            box-shadow: 0 .5rem 1rem #000000;
+            
+        }
+        .image{
+            height: 90%;
+            width: auto;
+        }
+        .details-box{
+            margin-top: 4rem;
+            width: 50%;
+            padding-left: 50px;
+            padding-right: 10px;       
+        }
+        @media (max-width:991px){
+            .details-box{
+            margin-top: 4rem;
+            width: 50%;
+            padding-left: 50px;  
+            width: auto; 
+        }
+        }
+        .details-box h1{
+            font-weight: 600;
+            color: #473729;
+            font-size: 3rem;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .details-box h4{
+            font-weight: 600;
+            color: #1a110a;
+            font-size: 3rem;
+            margin-top: 2rem;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-bottom: 1rem;
+        }
+        .details-box p{
+            font-weight: 600;
+            color: #000000;
+            font-size: 1.3rem;
+            font-style: italic;
+            margin-right: 6rem;
+            text-align: justify;
+        }
+        .details-box h2{
+            font-size: 2rem;
+            color: #167ddf;
+            border: #1900ff .3rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+        .fa{
+            color: #6aaae6;
+            margin-left: 10px;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!-- header section starts -->
+<header>
+    <input type="checkbox" name="" id="toggler"> <!--caseta de validare comutator-->
+    <label for="toggler" class="fas fa-bars"></label> <!--comutator-->
+
+    <a href="#" class="logo">ART<span>-</span>ISAN<span></a> <!--creare logo-->
+        <!--creare bara de navigare-->
+        <nav class="navbar">
+        <a href="index.html">Home</a> 
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="review.html">Community</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!--crearea unei clase de pictograme-->
+    <div class="icons">
+        <a href="favorites.html" class="fas fa-heart"></a>
+        <a href="cart.html" class="fas fa-shopping-cart"></a>
+        <a href="register&login.html" class="fas fa-user"></a>
+    </div>
+</header>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewreport" content="width=devicewidth, initial-scale=1.0">
+    <title>art auction website</title>
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+
+<!-- header section starts -->
+<header>
+    <input type="checkbox" name="" id="toggler"> <!--caseta de validare comutator-->
+    <label for="toggler" class="fas fa-bars"></label> <!--comutator-->
+
+    <a href="#" class="logo">ART<span>-</span>ISAN<span></a> <!--creare logo-->
+        <!--creare bara de navigare-->
+        <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="review.html">Community</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!--crearea unei clase de pictograme-->
+    <div class="icons">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="cart.html" class="fas fa-shopping-cart"></a>
+        <a href="#" class="fas fa-user"></a>
+    </div>
+</header>
+<!-- header section ends -->
+
+
+<!--about section starts-->
+
+<section class="about" id="about">
+    <h1 class="heading"> <span>Learn </span> more <span> about</span><span> us</span></h1>
+    <div class="row">
+        <div class="content">
+            <h3> Introduction</h3>
+            <p>In the vast tapestry of human expression, few endeavors capture the essence of creativity and emotion as profoundly as art. For many, including yourself, art transcends mere aesthetics; it becomes a conduit for self-expression, a language of the soul. As you embark on the journey of creating a website designed to sell art globally, your passion for the craft is not just a driving force but the very cornerstone upon which your endeavor stands. This piece of writing delves into the intricate web of your passion, purpose, and integrity as you navigate the realms of art and entrepreneurship.</p>
+            <h3>A passion-driven journey in building a global art platform</h3>
+            <p>At the heart of your venture lies an unwavering passion for art. It is more than just an interest or a hobby; it is a consuming flame that ignites your spirit and fuels your creativity. From the strokes of a brush to the intricacies of digital design, you find solace, inspiration, and boundless joy in the act of creation. Your passion is palpable in every piece you create or encounter, a fervent energy that breathes life into your endeavors.</p>
+            <p>From the tender age of two, our fascination with art was evident, a precocious spark that ignited a lifelong passion. While other toddlers were immersed in playtime with toys, we found ourselves drawn to crayons, markers, and any medium that allowed us to leave our mark on the canvas of creativity. Finger paintings adorned the walls of our childhood home, each colorful stroke a testament to our innate talent and boundless imagination. Even at such a young age, we displayed an intuitive understanding of form, color, and composition, delighting in the process of creation and discovery. As we grew, so too did our love for art, blossoming into a profound and enduring passion that would shape the trajectory of our life's journey.</p>
+            <h3>Purpose</h3>
+            <p>Beyond the realms of personal gratification, your venture into the world of online art sales is driven by a profound sense of purpose. You recognize the transformative power of art to evoke emotion, spark conversation, and foster connections across cultures and continents. Your purpose is rooted in the belief that every piece of art has the potential to touch hearts, enrich lives, and leave an indelible mark on the world. Through your platform, you aim to democratize access to art, bridging the gap between creators and collectors, and celebrating the diversity of artistic expression on a global scale.</p>
+            <h3>Integrity in Artisan</h3>
+            <p>As you navigate the intricate landscape of the art market, integrity serves as your guiding light. You understand the importance of authenticity, transparency, and ethical practices in fostering trust and credibility within the art community. From curating a diverse range of artists to ensuring fair compensation and promoting sustainable practices, integrity permeates every facet of your operation. You strive to create a platform where artists are valued, collectors are respected, and the integrity of the artistic process is upheld with unwavering dedication.</p>
+            <h3>The Art of Connection</h3>
+            <p>Central to our vision is the belief that art is not merely a commodity but a catalyst for connection and collaboration. Our website serves as more than just a marketplace; it is a virtual gallery, a communal space where artists and art lovers converge to share their passion, stories, and experiences. Through curated collections, artist features, and interactive forums, you foster a sense of belonging and camaraderie within the global art community. Every transaction becomes an opportunity to forge meaningful connections, bridge cultural divides, and cultivate a deeper appreciation for the beauty of human expression.</p>
+            <h3>Challenges and Triumphs</h3>
+            <p>Undoubtedly, the journey of building a global art platform is fraught with challenges and uncertainties. From technological hurdles to market fluctuations, each obstacle presents an opportunity for growth and resilience. Yet, amidst the trials and tribulations, your passion remains unwavering, your purpose unwavering, and your integrity unyielding. With each milestone achieved, each artist empowered, and each masterpiece shared, you celebrate not only the triumphs of entrepreneurship but the enduring power of art to inspire, unite, and elevate the human spirit.</p>
+            <h3>So, choose US!</h3>
+            <p>In the grand tapestry of life, art serves as a thread that binds us all together—a testament to our shared humanity, creativity, and resilience. As you embark on the noble quest of building a website designed to sell art all over the world, remember that your passion, purpose, and integrity are the guiding stars that will illuminate your path. Through your unwavering dedication and boundless creativity, you have the power to not only transform the art market but to enrich the lives of countless individuals across the globe. So, let your passion soar, your purpose guide you, and your integrity shine bright as you embark on this remarkable journey of artistry and entrepreneurship.</p>
+        </div>
+    </div>
+</section>
+
+<section class="footer">
+    
+    <div class="credit"> created by <span> Drăghici Daria-Ioana</span> all rights reserved</div>
+
+</section>
+
+    </body>
+</html>

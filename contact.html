@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewreport" content="width=devicewidth, initial-scale=1.0">
+    <title>art auction website</title>
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .contact .heading{
+            margin-top: 6.5rem;
+        }
+        @media (max-width:991px){
+            .container{
+                margin: 50px 20px;
+                display: flex;
+                margin-top: 14.5rem;
+                flex-wrap:wrap;
+                gap: 10rem;
+                margin-left: 3rem;
+            }
+        }
+
+        .right-box{
+            flex:1 1 30rem;
+            box-shadow: 0 .5rem 1.5rem #000000;
+            border-radius: .5rem;
+            padding: 3rem 2rem;
+            position: relative;
+            width: 50%;
+            background-color: #caa287;
+        }
+
+        .main-image-box{
+            padding: 30px 0px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        .main-image{
+            height: 390px;
+            width: fit-content;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+            padding-top: 2rem;
+            overflow: hidden;
+            
+        }
+        .small-images{
+            display: flex;
+            justify-content: space-between;
+            padding:8px;
+            align-items: center;
+            position: relative;
+            text-align: center;
+            padding-top: .5rem;
+            overflow: hidden;
+        }
+        .image-box{
+            margin: 0px 8px 8px 0px;
+            height: 100px;
+            width: 100px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            box-shadow: 0 .5rem 1rem #000000;
+            
+        }
+        .image{
+            height: 90%;
+            width: auto;
+        }
+        .details-box{
+            margin-top: 4rem;
+            width: 50%;
+            padding-left: 50px;
+            padding-right: 10px;       
+        }
+        @media (max-width:991px){
+            .details-box{
+            margin-top: 4rem;
+            width: 50%;
+            padding-left: 50px;  
+            width: auto; 
+        }
+        }
+        .details-box h1{
+            font-weight: 600;
+            color: #473729;
+            font-size: 3rem;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .details-box h4{
+            font-weight: 600;
+            color: #1a110a;
+            font-size: 3rem;
+            margin-top: 2rem;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-bottom: 1rem;
+        }
+        .details-box p{
+            font-weight: 600;
+            color: #000000;
+            font-size: 1.3rem;
+            font-style: italic;
+            margin-right: 6rem;
+            text-align: justify;
+        }
+        .details-box h2{
+            font-size: 2rem;
+            color: #167ddf;
+            border: #1900ff .3rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+        .fa{
+            color: #6aaae6;
+            margin-left: 10px;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!-- header section starts -->
+<header>
+    <input type="checkbox" name="" id="toggler"> <!--caseta de validare comutator-->
+    <label for="toggler" class="fas fa-bars"></label> <!--comutator-->
+
+    <a href="#" class="logo">ART<span>-</span>ISAN<span></a> <!--creare logo-->
+        <!--creare bara de navigare-->
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html">Products</a>
+            <a href="review.html">Community</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    <!--crearea unei clase de pictograme-->
+    <div class="icons">
+        <a href="favorites.html" class="fas fa-heart"></a>
+        <a href="cart.html" class="fas fa-shopping-cart"></a>
+        <a href="register&login.html" class="fas fa-user"></a>
+    </div>
+</header>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewreport" content="width=devicewidth, initial-scale=1.0">
+    <title>art auction website</title>
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+
+<!-- header section starts -->
+<header>
+    <input type="checkbox" name="" id="toggler"> <!--caseta de validare comutator-->
+    <label for="toggler" class="fas fa-bars"></label> <!--comutator-->
+
+    <a href="#" class="logo">ART<span>-</span>ISAN<span></a> <!--creare logo-->
+        <!--creare bara de navigare-->
+        <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="review.html">Community</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!--crearea unei clase de pictograme-->
+    <div class="icons">
+        <a href="favorites.html" class="fas fa-heart"></a>
+        <a href="cart.html" class="fas fa-shopping-cart"></a>
+        <a href="register&login.html" class="fas fa-user"></a>
+    </div>
+</header>
+<!-- header section ends -->
+
+
+<!-- contact section starts -->
+<section class="contact" id="contact">
+    <h1 class="heading"> Get in <span>contact</span></h1>
+    <div class="hero">
+    <form>
+        <div class="row">
+            <div class="input-group">
+                <input type="text" id="name" required>
+                <label for="name"><i class="fas fa-user"></i> Your name</label>
+            </div>
+            <div class="input-group">
+                <input type="text" id="number" required>
+                <label for="number"><i class="fas fa-phone-square-alt"></i> Phone number</label>
+            </div>
+        </div>
+        <div class="input-group">
+            <input type="email" id="email" required>
+            <label for="email"><i class="fas fa-envelope"></i> Email Id</label>
+        </div>
+        <div class="input-group">
+            <textarea id="message" rows="8" required></textarea>
+            <label for="message"><i class="fas fa-comments"></i>Your message</label>
+        </div>
+        <div class="btn-group">
+            <button type="submit" class="btn submit"> <i class="fas fa-paper-plane"></i> Send message</button>
+            <button class="btn cancel">Cancel</button>
+        </div>
+    </form>
+    </div>
+</section>
+<!-- contact section ends -->
+
+<!-- footer section starts -->
+
+<section class="footer">
+    
+    <div class="credit"> created by <span> Drăghici Daria-Ioana</span> all rights reserved</div>
+
+</section>
+
+<!-- footer section ends -->
+
+</body>
+</html>

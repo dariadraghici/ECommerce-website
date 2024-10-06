@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewreport" content="width=devicewidth, initial-scale=1.0">
+    <title>art auction website</title>
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .container{
+            margin: 50px 20px;
+            display: flex;
+            margin-top: 14.5rem;
+            gap: 10rem;
+            margin-left: 3rem;
+        }
+        @media (max-width:991px){
+            .container{
+                margin: 50px 20px;
+                display: flex;
+                margin-top: 14.5rem;
+                flex-wrap:wrap;
+                gap: 10rem;
+                margin-left: 3rem;
+            }
+        }
+
+        .right-box{
+            flex:1 1 30rem;
+            box-shadow: 0 .5rem 1.5rem #000000;
+            border-radius: .5rem;
+            padding: 3rem 2rem;
+            position: relative;
+            width: 50%;
+            background-color: #caa287;
+        }
+
+        .main-image-box{
+            padding: 30px 0px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        .main-image{
+            height: 390px;
+            width: fit-content;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+            padding-top: 2rem;
+            overflow: hidden;
+            
+        }
+        .small-images{
+            display: flex;
+            justify-content: space-between;
+            padding:8px;
+            align-items: center;
+            position: relative;
+            text-align: center;
+            padding-top: .5rem;
+            overflow: hidden;
+        }
+        .image-box{
+            margin: 0px 8px 8px 0px;
+            height: 100px;
+            width: 100px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            box-shadow: 0 .5rem 1rem #000000;
+            
+        }
+        .image{
+            height: 90%;
+            width: auto;
+        }
+        .details-box{
+            margin-top: 4rem;
+            width: 50%;
+            padding-left: 50px;
+            padding-right: 10px;       
+        }
+        @media (max-width:991px){
+            .details-box{
+            margin-top: 4rem;
+            width: 50%;
+            padding-left: 50px;  
+            width: auto; 
+        }
+        }
+        .details-box h1{
+            font-weight: 600;
+            color: #473729;
+            font-size: 3rem;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .details-box h4{
+            font-weight: 600;
+            color: #1a110a;
+            font-size: 3rem;
+            margin-top: 2rem;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-bottom: 1rem;
+        }
+        .details-box p{
+            font-weight: 600;
+            color: #000000;
+            font-size: 1.3rem;
+            font-style: italic;
+            margin-right: 6rem;
+            text-align: justify;
+        }
+        .details-box h2{
+            font-size: 2rem;
+            color: #167ddf;
+            border: #1900ff .3rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+        .fa{
+            color: #6aaae6;
+            margin-left: 10px;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!-- header section starts -->
+<header>
+    <input type="checkbox" name="" id="toggler"> <!--caseta de validare comutator-->
+    <label for="toggler" class="fas fa-bars"></label> <!--comutator-->
+
+    <a href="#" class="logo">ART<span>-</span>ISAN<span></a> <!--creare logo-->
+        <!--creare bara de navigare-->
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html">Products</a>
+            <a href="review.html">Community</a>
+            <a href="contact.html">Contact</a>
+    </nav>
+
+    <!--crearea unei clase de pictograme-->
+    <div class="icons">
+        <a href="favorites.html" class="fas fa-heart"></a>
+        <a href="cart.html" class="fas fa-shopping-cart"></a>
+        <a href="register&login.html" class="fas fa-user"></a>
+    </div>
+</header>
+
+<div class="container">
+    <div class="right-box">
+        <div class="main-image-box">
+            <img src="css/images/The Loneliest/The Loneliest.jpg" id="mainImage" class="main-image">
+        </div>
+        <div class="small-images">
+            <div class="image-box"><img src="css/images/The Loneliest/The Loneliest1.jpg" class="image"></div>
+            <div class="image-box"><img src="css/images/The Loneliest/The Loneliest2.jpg" class="image"></div>
+            <div class="image-box"><img src="css/images/The Loneliest/The Loneliest.jpg" class="image"></div>
+            <div class="image-box"><img src="css/images/The Loneliest/The Loneliest3.jpg" class="image"></div>
+        </div>
+    </div>
+    <div class="details-box">
+        <h1>The Loneliest by Martha Stravinski</h1>
+        <p> Availability (In stock)</p>
+        <h2>84.99$</h2>
+        <table cellspacing="4" class="inputs">
+            <tr>
+                <td>Quantity</td>
+                <td align="right"><input type="number" id="first"></td>
+            </tr>
+            <tr>
+                <td> Sub Total</td>
+                <td align="right"><input type="number" id="second"></td>
+            </tr>
+            <tr>
+                <td> Total</td>
+                <td align="right"><input type="number" id="fourth"></td>
+            </tr>
+        </table>
+        <h4>Description <i class="fa fa-indent"></i></h4>
+        <p>
+            In the evocative painting "Loved and Lost" by Haynes King, the viewer is transported into a realm of profound emotion and introspection. Through a striking arrangement of dark colors and poignant imagery, King captures a poignant moment between a mother and her teenage daughter, delving into themes of love, loss, and the human condition.
+
+At the heart of the composition, the mother stands as a pillar of strength and compassion, her gentle embrace offering solace to her distraught daughter. The daughter, seated on a chair, her face hidden in her hands, embodies the rawness of grief, her tears a silent testament to the pain she carries. Despite the darkness that envelops them, there is a palpable sense of connection between the two figures, a bond forged through shared experiences and unconditional love.
+
+The use of dark, muted tones throughout the painting lends an air of solemnity and depth to the scene, echoing the complexities of the emotions depicted. Deep shades of blue and purple dominate the palette, their richness adding layers of texture and meaning to the composition. Yet, amidst the shadows, there are subtle hints of lighter hues, symbolizing moments of hope and resilience amidst the darkness.
+
+Through his masterful manipulation of light and shadow, King invites the viewer to contemplate the fragile nature of human relationships and the inevitability of loss. The mother's tender gesture of comfort serves as a reminder of the enduring power of compassion and empathy in times of hardship, offering a beacon of light in the midst of despair.
+
+As we gaze upon "Loved and Lost," we are reminded of the universal experience of navigating grief and the transformative power of love in overcoming adversity. In capturing this intimate moment between mother and daughter, Haynes King invites us to reflect on our own relationships and the profound impact they have on our lives, urging us to cherish each moment and hold onto the bonds that sustain us through life's trials and tribulations
+        </p>
+        <a href="cart.html" class="btn">Add to cart</a>
+    </div>
+</div>
+<script>
+let mainImage =  document.getElementById("mainImage");
+    let smallImage = document.getElementsByClassName("image");
+    smallImage[0].onclick = ()=>{
+        mainImage.src =  smallImage[0].src;
+    }
+    smallImage[1].onclick = ()=>{
+        mainImage.src =  smallImage[1].src;
+    }
+    smallImage[2].onclick = ()=>{
+        mainImage.src =  smallImage[2].src;
+    }
+    smallImage[3].onclick = ()=>{
+        mainImage.src =  smallImage[3].src;
+    }
+    function cart(){
+        var a,b,c,d;
+        a=document.getElementById("first").value;
+        b=a*84.99;
+        document.getElementById("second").value=b;
+        d=b;
+        document.getElementById("fourth").value=d;
+    }
+    let ans=document.getElementById("first");
+    ans.addEventListener('keyup',cart);
+</script>
+
+<section class="footer">
+    
+    <div class="credit"> created by <span> Drăghici Daria-Ioana</span> all rights reserved</div>
+
+</section>
+
+    </body>
+</html>
