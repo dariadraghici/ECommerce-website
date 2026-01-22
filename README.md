@@ -1,63 +1,58 @@
-# ART-ISAN: Online Art Gallery
+# ART-ISAN: A Marketplace for Emerging Artists
 
-**Short Description:**
+**Short Description:** > A multi-page e-commerce ecosystem built with a PHP/MySQL backend to empower small-scale artists by showcasing and selling their unique masterpieces.
 
-> A comprehensive web platform designed to showcase and sell unique artworks, featuring a custom PHP backend and integrated MySQL database management.
+## 🎨 Project Essence
 
+**ART-ISAN** is my "Atestat" (Professional Certification) project for the "Matematică-Informatică" profile. It is a full-stack web platform designed to function as a bridge between the niche world of independent art and the digital marketplace.
 
-## 🎨 Project Overview
+The project goes beyond simple aesthetics; it implements complex user management, a dynamic shopping cart system, and an interactive database to handle the real-world logic of an online store.
 
-**ART-ISAN** is the culmination of my 12th-grade professional certification (Atestat). This project was born out of a passion for both art and technology, aiming to bridge the gap between young, emerging artists and art enthusiasts.
+## ✨ Core Features
 
-The platform serves as a fully functional e-commerce environment where users can browse galleries, learn about the history of specific pieces, manage a shopping cart, and interact with the creators.
+* **Comprehensive Art Portfolio:** Multiple gallery tiers (`products.html`, `products-2.html`, etc.) and dedicated story pages for individual pieces like *The Loneliest*, *Ethereal Bonds*, and *Charleston*.
+* **User Lifecycle Management:** Complete Authentication flow including Registration, Login, and Logout functionality powered by PHP.
+* **Database Integration:** Utilizes a **XAMPP (MySQL)** backend to persistently store:
+* User credentials (securely managed via `register.php`).
+* Customer reviews and ratings (`review.html`).
+* Contact inquiries and support tickets.
+* **E-commerce Workflow:** * A dynamic **Shopping Cart** (`cart.html`) and **Favorites** list.
+* Order processing sequence: `orderdetails.html` → `orderplaced.html`.
+* **Interactive UI/UX:** Features background videos (`us-video.mp4`), custom CSS animations, and JavaScript-driven interactivity for a premium, modern feel.
+* **Support & Engagement:** A "Learn More" section for artist stories and a contact portal with phone and email integration.
 
-## 🚀 Key Features
+## 🛠 Technical Stack
 
-* **Dynamic Art Gallery:** A rich visual display of artworks (Paintings, Photography, and more) with detailed descriptions and pricing.
-* **User Authentication:** A robust login and registration system to manage user sessions and secure personal data.
-* **Persistent Database:** Powered by **XAMPP (MySQL)**, the system securely stores:
-* User profiles and encrypted credentials.
-* Customer reviews and feedback.
-* Contact messages and inquiries.
-* **Interactive Shopping Cart:** Real-time calculation of totals, taxes, and discounts based on the user's selection.
-* **Responsive UI:** Optimized for various screen sizes, ensuring a seamless experience from desktop to mobile devices.
-* **Contact & Feedback:** An integrated form for users to send messages directly to the administration.
+* **Frontend:** HTML5, CSS3 (Custom styles and Responsive Design), JavaScript (ES6).
+* **Backend:** PHP 8.x for server-side logic and session management.
+* **Database:** MySQL (relational database structure created in XAMPP).
+* **Environment:** Developed and tested on a local Apache server.
 
-## 🛠 Tech Stack
+## 📁 File Structure Highlights
 
-* **Frontend:** HTML5, CSS3 (Custom styles and Font-Awesome icons), and JavaScript (for dynamic image switching and cart logic).
-* **Backend:** PHP (Server-side logic and database connectivity).
-* **Database:** MySQL (Managed via XAMPP/phpMyAdmin).
-* **Design:** Modern, minimalist aesthetic focused on high-quality art presentation.
+* **`index.html`**: The main entry point featuring the primary gallery and branding.
+* **`connect.php`**: The vital link establishing the connection between the application and the MySQL server.
+* **`css/style.css`**: A centralized stylesheet managing the visual identity and responsiveness of all 30+ pages.
+* **`registration.html` & `register.php**`: The frontend/backend pair handling new user creation.
+* **Artwork Specifics**: Individual pages (e.g., `colivie.html`, `campagne.html`) providing deep-dive descriptions and pricing for specific works.
 
-## 📁 Project Structure
+## ⚙️ Installation & Usage
 
-The site is organized into multiple specialized pages to ensure a clean user journey:
-
-* `index.html`: The gateway to the gallery, featuring the latest collections.
-* `about.html`: Information regarding our mission and shipping/return policies.
-* `cart.html`: The shopping management interface.
-* `contact.html`: A dedicated portal for user inquiries.
-* **Specific Artwork Pages:** (e.g., `ethereal.html`, `charleston.html`, `colivie.html`) Detailed views of individual masterpieces.
-* `connect.php`: The bridge between the web interface and the SQL database.
-
-## ⚙️ Setup & Installation
-
-1. **Server Environment:** Install [XAMPP](https://www.apachefriends.org/index.html) or any WAMP/LAMP stack.
-2. **Database Configuration:**
-* Open `phpMyAdmin`.
-* Create a database named `login`.
-* Import the SQL tables (for users and messages) as defined in the `connect.php` parameters.
+1. **Server Setup**: Install and run [XAMPP](https://www.apachefriends.org/).
+2. **Database Import**:
+* Access `phpMyAdmin`.
+* Create a database named `login` (as specified in `connect.php`).
+* Ensure tables for `users` and `messages` are initialized.
 
 
-3. **Deployment:** Place the project folder in the `htdocs` directory of your XAMPP installation.
-4. **Launch:** Navigate to `http://localhost/ART-ISAN/index.html` in your browser.
+3. **Deployment**: Copy the project folder into the `htdocs` directory of your XAMPP installation.
+4. **Navigation**: Open your browser and go to `http://localhost/atestat_pr/index.html`.
 
 
-## ❤️ Acknowledgments
+## 📝 Conclusion
 
-This project represents a significant milestone in my journey as a developer. It allowed me to apply theoretical knowledge from my "Matematică-Informatică" profile into a tangible, professional application.
+This project represents a significant personal and technical milestone. It successfully integrates the logic of computer science with the sensitivity of art. Developing ART-ISAN allowed me to master the coordination between frontend interactivity and backend data persistence, resulting in a professional-grade application ready for a portfolio.
 
-**Created with passion by:** **Daria-Ioana Drăghici** *Class of 2024*
+**Developed with ❤️ by:** **Daria-Ioana Drăghici** *Class of 2023-2024* *Colegiul Național „Bogdan Petriceicu Hasdeu” Buzău*
 
 **ENJOY <3**
