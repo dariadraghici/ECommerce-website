@@ -86,6 +86,7 @@ Individualized pages providing historical context and granular pricing for speci
 
 This project stands as a testament to my technical evolution, harmonizing the logical rigor of Computer Science with the evocative nature of the Fine Arts. Through the development of **ART-ISAN**, I have mastered the orchestration of frontend interactivity with backend data persistence, creating a professional-grade application ready for a real-world portfolio.
 
-**Developed with ❤️ by:** **Daria-Ioana Drăghici** *Class of 2023-2024* *Mathematics & Computer Science Intensive* *Colegiul Național „Bogdan Petriceicu Hasdeu” Buzău*
+**Developed with ❤️ by:** **Daria-Ioana Drăghici** 
+*Class of 2020-2024* *Mathematics & Computer Science Intensive* *Colegiul Național „Bogdan Petriceicu Hasdeu” Buzău*
 
 **ENJOY <3**
